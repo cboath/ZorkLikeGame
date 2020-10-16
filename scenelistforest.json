@@ -1,0 +1,17 @@
+{
+    "forest": [
+        {
+            "location": [1, 1],
+            "description": "There is a sign at the beginning of a well lit path to the north.  To the east there is a small shed.",
+            "items": [1, 2, 3],
+            "sign": "Tegridy Farms",
+            "directions": ["n", "e"]
+        },
+        {
+            "location": [2, 1],
+            "description": "The path leads to a lovely castle.",
+            "items": [],
+            "directions": ["s", "n"]
+        }
+    ]
+}
