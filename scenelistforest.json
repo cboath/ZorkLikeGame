@@ -2,16 +2,23 @@
     "forest": [
         {
             "location": [1, 1],
-            "description": "There is a sign at the beginning of a well lit path to the north.  To the east there is a small shed.",
+            "description": "There is a sign at the beginning of a well lit bridge to the north.  There is a path to the east.  There is a small shed nearby.",
             "items": [1, 2, 3],
-            "sign": "Tegridy Farms",
-            "directions": ["n", "e"]
+            "sign": "Welcome to Tegridy Farms",
+            "directions": ["n", "e"],
+            "specials": [1]
         },
         {
             "location": [2, 1],
-            "description": "The path leads to a lovely castle.",
+            "description": "The path leads north to a lovely castle.  There is an opening to the south.",
             "items": [],
             "directions": ["s", "n"]
+        },
+        {
+            "location": [1, 2],
+            "description": "You feel a chill run through your body.  The ground feels soft.",
+            "items": [],
+            "directions": ["w"]
         }
     ]
 }
