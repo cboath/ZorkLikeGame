@@ -4,13 +4,9 @@ from scene import getScene
 from actionResolution import actionResolution
 
 actionOption = ''
-
-print('You are located at', character.location)
+hits = getScene(character.location)
 
 while(actionOption != 'q'):
-
-    hits = getScene(character.location)
-
     getIt = input("What would you like to do? ")
     actionOption = getIt.lower()
 

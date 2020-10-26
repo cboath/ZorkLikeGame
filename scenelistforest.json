@@ -3,10 +3,14 @@
         {
             "location": [1, 1],
             "description": "There is a sign at the beginning of a well lit bridge to the north.  There is a path to the east.  There is a small shed nearby.",
-            "items": [1, 2, 3],
+            "items": ["shovel"],
             "sign": "Welcome to Tegridy Farms",
             "directions": ["n", "e"],
-            "specials": [1]
+            "specials": [1],
+            "shed": [
+                "The shed is small and musty.",
+                "There is a shovel leaning against the wall."
+            ]
         },
         {
             "location": [2, 1],

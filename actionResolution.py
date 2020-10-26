@@ -1,4 +1,5 @@
-import json
+from scene import getScene
+from take import take
 
 # Resolve movement
 def move(direction, character, hits):
@@ -20,9 +21,13 @@ def move(direction, character, hits):
     if(firstDirec == 'w'):
         character.location[2] -= 1
 
-def examine(action, hits):
+    hits = getScene(character.location)
+
+
+def examine(character, action, hits):
+    # if there is only one item in action it is likely examine and will return the text describing the location
     if(len(action) == 1):
-        return
+        hits = getScene(character.location)
     else:
         print(hits['sign'])
 
@@ -38,7 +43,9 @@ def actionResolution(character, actionOption, hits):
             print('Whahahaha? ', action[0])
             move(action[1], character, hits)
         if action[0] in ('read', 'examine'):
-            examine(action, hits)
+            examine(character, action, hits)
+        if action[0] in ('take', 'grab'):
+            take(character, action, hits)
 
     else:
         move(actionOption, character, hits)
