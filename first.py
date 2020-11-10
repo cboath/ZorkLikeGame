@@ -7,6 +7,7 @@ actionOption = ''
 hits = getScene(character.location)
 
 while(actionOption != 'q'):
+    print('Hits be: ', hits)
     getIt = input("What would you like to do? ")
     actionOption = getIt.lower()
 

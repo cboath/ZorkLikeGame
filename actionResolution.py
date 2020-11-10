@@ -9,6 +9,7 @@ def move(direction, character, hits):
 
     # If not a valid direction
     while firstDirec not in possDirec:
+        print('Where to? ', possDirec)
         testDir = input('Not a valid direction.  Which way would you like to go? ')
         firstDirec = testDir[0].lower()
 
@@ -22,6 +23,8 @@ def move(direction, character, hits):
         character.location[2] -= 1
 
     hits = getScene(character.location)
+
+    return hits
 
 
 def examine(character, action, hits):
@@ -40,7 +43,6 @@ def actionResolution(character, actionOption, hits):
     if(len(actionOption) > 1):      
         action = actionOption.split()
         if action[0] in ('go', 'move', 'walk'):
-            print('Whahahaha? ', action[0])
             move(action[1], character, hits)
         if action[0] in ('read', 'examine'):
             examine(character, action, hits)
